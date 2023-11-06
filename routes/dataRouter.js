@@ -6,7 +6,7 @@ require('dotenv').config();
 const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY});
 
 const dataRouter = express.Router();
-app.use(cors());
+dataRouter.use(cors());
 
 
 async function getAIGeneratedResponse(requestedGenerateMessage){

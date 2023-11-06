@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
+
+const cors = require('cors');
 const dataRouter = require('./routes/dataRouter');
 
 app.use(express.json());
+app.use(cors());
 app.use('/api/resumedata', dataRouter);
 
 const port = process.env.PORT || 3000;
